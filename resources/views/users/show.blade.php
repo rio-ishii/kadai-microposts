@@ -6,9 +6,8 @@
             
             {{-- ユーザ情報 --}}
             @include('users.card')
-            {{-- フォロー／アンフォローボタン --}}
-            @include('user_follow.follow_button')
-            @include('favorites.favorite_button')
+            
+          
         </aside>
         <div class="col-sm-8">
             <ul class="nav nav-tabs nav-justified mb-3">

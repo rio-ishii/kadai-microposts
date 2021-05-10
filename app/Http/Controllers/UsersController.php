@@ -118,7 +118,7 @@ class UsersController extends Controller
     public function favorite_users($id)
     {
         // idの値でユーザを検索して取得
-        $user = User::findOrFail($id);
+        $user = Micropost::findOrFail($id);
 
         // 関係するモデルの件数をロード
         $user->loadRelationshipCounts();
