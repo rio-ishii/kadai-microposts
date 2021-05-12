@@ -1,5 +1,5 @@
 @if (Auth::id() != $user->id)
-    @if (Auth::user()->is_favorite($user->id))
+    @if (Auth::user()->is_favoriting($user->id))
         {{-- アンフォローボタンのフォーム --}}
         {!! Form::open(['route' => ['favorites.unfavorite', $user->id], 'method' => 'delete']) !!}
             {!! Form::submit('Unfavorite', ['class' => "btn btn-secondary btn-sm"]) !!}
