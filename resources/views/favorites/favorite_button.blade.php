@@ -1,4 +1,4 @@
-@if (Auth::id() != $user->id)
+
     @if (Auth::user()->is_favoriting($micropost->id))
         {{-- アンフォローボタンのフォーム --}}
         {!! Form::open(['route' => ['favorites.unfavorite', $micropost->id], 'method' => 'delete']) !!}
@@ -10,4 +10,3 @@
             {!! Form::submit('Favorite', ['class' => "btn btn-success btn-sm"]) !!}
         {!! Form::close() !!}
     @endif
-@endif
